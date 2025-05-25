@@ -26,8 +26,8 @@ jobs:
 
       - name: Install build dependencies
         run: |
-          sudo apt update
-          sudo apt update && sudo apt install -y adb autoconf automake axel bc bison build-essential bzip2 ccache clang cmake curl device-tree-compiler dpkg-dev expat fastboot flex ftp g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gzip imagemagick jq lftp libarchive-tools libbz2-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libfl-dev libgmp-dev libgl1-mesa-dev liblz4-tool liblzma-dev libmpc-dev libmpfr-dev libncurses-dev libpng-dev libssl-dev libswitch-perl libtinfo5 libtool libx11-dev libxml2 libxml2-utils libxml-simple-perl lzop make maven minicom ncftp ncurses-dev optipng patch patchelf pkg-config pngcrush pngquant policycoreutils pwgen python3 python3-all-dev python3-pip python3-venv re2c rsync schedtool software-properties-common squashfs-tools subversion tar texinfo tree unzip w3m wget zip zlib1g-dev
+          sudo apt-get update
+          sudo apt-get install -y adb autoconf automake axel bash bc bison build-essential bzip2 ccache clang cmake curl device-tree-compiler dpkg-dev expat fastboot flex ftp g++ g++-multilib gawk gcc gcc-multilib git git-lfs gnupg gzip imagemagick jq lftp lib32ncurses6 lib32z1-dev libarchive-tools libbz2-dev libc6-dev libc6-dev-i386 libcap-dev libexpat1-dev libfl-dev libgmp-dev libgl1-mesa-dev liblz4-tool libmpc-dev libmpfr-dev libncurses-dev libssl-dev libtinfo5 libtool libxml2 lzip lzop make maven minicom ncftp optipng patchelf pkg-config pngcrush pngquant policycoreutils pwgen python3-all-dev python3-pip python-is-python3 re2c rsync schedtool software-properties-common squashfs-tools subversion tar texinfo tree unzip w3m wget xsltproc zip zlib1g-dev
           sudo pip3 install yq
 
       - name: Set up ccache
