@@ -48,6 +48,11 @@ jobs:
           chmod +x clone.sh
           ./clone.sh
 
+      - name: Configure kernel
+        run: |
+          cd kernel
+          make oldconfig
+    
       - name: Add Clang to PATH
         run: |
           echo "${CLANG_PATH}" >> $GITHUB_PATH
